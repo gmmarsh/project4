@@ -1,0 +1,6 @@
+# Virtual Environment
+venv/
+# Cofiguration files
+config.py
+# pycache
+__pycache__/
