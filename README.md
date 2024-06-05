@@ -19,3 +19,5 @@ https://radimrehurek.com/gensim/index.html
 
 https://pyldavis.readthedocs.io/en/latest/index.html
 
+https://www.datacamp.com/tutorial/what-is-topic-modeling
+
