@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Topic Modeling</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="navbar">
+        <a href="/home">Home</a>
+        <a href="/what">What?</a>
+        <a href="/Why">Why?</a>
+        <a href="/how">How?</a>
+        <a href="/20NewsGroups">20NewsGroups</a>
+        <a href="/Prediction">Prediction</a>
+    </div>
+
+    <div id="how"></div>
+        <h2>How did we go about addressing this challenge of identifying topics or themes using topic modeling?</h2>
+        <ol> 
+            <li>We identified a dataset that contained a collection of documents that we wanted to analyze</li>
+            <li>We preprocessed the data by removing stopwords, punctuation, and converting the text to lowercase</li>
+            <li>We tokenized the text and created a document-term matrix</li>
+            <li>We applied a topic modeling algorithm to the document-term matrix to identify topics or themes in the data</li>
+            <li>We visualized the topics using a word cloud or other visualization techniques</li>
+            <li>We interpreted the results and used the topics to gain insights into the data</li>
+        </ol>
+        <h2>Was there a 'gold' standard that we could copy?</h2>
+        <ul>
+            <li>We imported the Sklearn 20newsgroups dataset which is a collection of newsgroup documents</li>
+            <li>We used the Latent Dirichlet Allocation (LDA) algorithm to identify topics in the dataset using the Top2Vec algorithm</li>
+            <li>The Top2Vec algorithm is a topic modeling algorithm that combines topic modeling with word embeddings</li>
+            <li>Preprocessing the newsgroup data prior to running the algorithm was not required.</li>
+            <li>We evaluated the performance of the LDA algorithm using metrics such as coherence score and perplexity</li>
+            <li>We visualized the topics using a word cloud and other visualization techniques</li>
+        </ul>
+ </body>
+</html>
