@@ -35,6 +35,7 @@ body {
     border: 2px solid navy;
     border-radius: 15px;
     padding: 10px;
+    display: block;
 }
 
 /*image_source*/
@@ -42,4 +43,14 @@ body {
     position: fixed;
     left: 10px;
     bottom: 10px;
+}
+
+#text {
+    width: 1000px; /* Or whatever width you want */
+    height: 500px; /* Or whatever height you want */
+}
+
+body {
+    overflow-y: auto; /* Add vertical scrollbar if necessary */
+    overflow-x: auto; /* Add horizontal scrollbar if necessary */
 }
