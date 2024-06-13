@@ -6,3 +6,7 @@ config.py
 __pycache__/
 # .DS_Store
 .DS_Store
+# z_git_ignore
+z_git_ignore/
+# flask app
+flask_app/
