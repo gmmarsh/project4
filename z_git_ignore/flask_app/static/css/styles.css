@@ -1,0 +1,56 @@
+/* background color */
+.navbar {
+    background-color: navy;
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 200px; /* Adjust as needed */
+    overflow: auto;
+}
+/* Links inside the navbar */
+.navbar a {
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+/* Change color on hover */
+.navbar a:hover {
+    background-color: yellow;
+    color: black;
+}
+
+/*body*/
+body {
+    margin-left: 200px; /* Same as the width of the sidenav */
+    font-family: "Lato", sans-serif;
+    background-color: #f6e0cd;
+}
+
+/*image*/
+.soft-edges {
+    border-radius: 15px;
+    border: 2px solid navy;
+    border-radius: 15px;
+    padding: 10px;
+    display: block;
+}
+
+/*image_source*/
+.image-source {
+    position: fixed;
+    left: 10px;
+    bottom: 10px;
+}
+
+#text {
+    width: 1000px; /* Or whatever width you want */
+    height: 500px; /* Or whatever height you want */
+}
+
+body {
+    overflow-y: auto; /* Add vertical scrollbar if necessary */
+    overflow-x: auto; /* Add horizontal scrollbar if necessary */
+}
