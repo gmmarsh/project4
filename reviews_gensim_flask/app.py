@@ -78,7 +78,8 @@ def visualization():
             lda_html = f.read()
         with open('coherence.html', 'r') as f:
             coherence_html = f.read()
-        return lda_html + coherence_html
+        header = '<h1>Topic Modeling of Amazon Book Reviews</h1>'
+        return header + lda_html + coherence_html
     except Exception as e:
         app.logger.error(f"Error: {e}")
         return str(e), 500

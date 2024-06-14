@@ -71,11 +71,16 @@ def home():
 
 @app.route('/visualization')
 def visualization():
-    with open('lda.html', 'r') as f:
-        lda_html = f.read()
-    with open('coherence.html', 'r') as f:
-        coherence_html = f.read()
-    return lda_html + coherence_html
+    try:
+        with open('lda.html', 'r') as f:
+            lda_html = f.read()
+        with open('coherence.html', 'r') as f:
+            coherence_html = f.read()
+        header = '<h1>Topic Modeling of SKlearn 20 News Group Data</h1>'
+        return header + lda_html + coherence_html
+    except Exception as e:
+        app.logger.error(f"Error: {e}")
+        return str(e), 500
 
 if __name__ == '__main__':
     app.run(debug=True)

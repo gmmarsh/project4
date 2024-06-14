@@ -3,6 +3,8 @@ from flask import request
 from gensim import corpora, models
 import pyLDAvis.gensim_models
 import spacy
+from wordcloud import WordCloud
+import matplotlib.pyplot as plt
 
 app = Flask(__name__)
 
@@ -62,12 +64,12 @@ def home():
             for num_topics, coherence_score in enumerate(coherence_scores, start=2):
                 f.write(f'<tr><td>{num_topics}</td><td>{coherence_score}</td></tr>')
             f.write('</table>')
-
+            
         return redirect(url_for('visualization'))
 
     return '''
         <form method="POST">
-            <button type="submit">Load Data</button>
+            <button type="submit">Load Speeches Data</button>
         </form>
     '''
 
@@ -78,7 +80,8 @@ def visualization():
             lda_html = f.read()
         with open('coherence.html', 'r') as f:
             coherence_html = f.read()
-        return lda_html + coherence_html
+        header = '<h1>Topic Modeling of U.S. Presidential Speeches</h1>'
+        return header + lda_html + coherence_html
     except Exception as e:
         app.logger.error(f"Error: {e}")
         return str(e), 500
