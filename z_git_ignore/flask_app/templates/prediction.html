@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Topic Modeling</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="navbar">
+        <a href="/home">Home</a>
+        <a href="/what">What?</a>
+        <a href="/Why">Why?</a>
+        <a href="/how">How?</a>
+        <a href="/20NewsGroups">20NewsGroups</a>
+        <a href="/Prediction">Prediction</a>
+    </div>
+
+    <form method="POST" action="/Prediction">
+        <label for="text">Enter text:</label><br>
+        <textarea id="text" name="text"></textarea><br>
+        <input type="submit" value="Get Topics">
+    </form>
+
+    {% if prediction %}
+        <h2>Topics:</h2>
+        <ul>
+            {% for topic in prediction %}
+                <li>{{ topic }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+    
+</body>
+</html>
