@@ -10,3 +10,15 @@ __pycache__/
 z_git_ignore/
 # flask app
 flask_app/
+# news_group_gensim_flask
+news_group_gensim_flask/coherence.html
+news_group_gensim_flask/lda.html
+# reviews_gensim_flask
+reviews_gensim_flask/__pycache__/
+reviews_gensim_flask/API_call_data_extraction.ipynb
+reviews_gensim_flask/API_preparation.ipynb
+# speeches_gensim_flask
+speeches_gensim_flask/API_speeches.ipynb
+speeches_gensim_flask/coherence.html
+speeches_gensim_flask/lda.html
+speeches_gensim_flask/speeches.txt
